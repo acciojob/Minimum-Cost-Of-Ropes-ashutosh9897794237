@@ -1,5 +1,5 @@
 function calculateMinCost() {
-alert(event);
+
     event.preventDefault();
   var inputElement = document.queryselector('input').value;
   var arr = inputElement.split(',');
@@ -10,8 +10,7 @@ alert(event);
 		var res = Number(arr[0])+ Number(arr[1]);
 		arr.push(res);
 		cost +=res;
-		arr.shift;
-		arr.shift;
+		
 
 		arr.short(function (a,b) {return a-b};)
 	}
