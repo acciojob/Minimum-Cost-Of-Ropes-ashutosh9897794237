@@ -1,17 +1,22 @@
 
-  //your code here
-	import heapq
-def ConnectRope(ropes):
-    heapq.heapify(ropes)
-    res = 0
-    while len(ropes) > 1:
-        cur = heapq.heappop(ropes)+heapq.heappop(ropes)
-        heapq.heappush(ropes, cur)
-        res += cur
-    return res
+// This file is not to be modified. Please ignore this.
+// We will understand all of this later in the course.
+// DO NOT MODIFY THIS FILE
 
-ropes = [8, 4, 6, 12]
-print(ConnectRope(ropes))
-  document.getElementById("result").innerHTML = cost
-  
-}  
+const express = require('express');
+const path = require('path');
+
+const app = express();
+
+app.use(express.static(__dirname))
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname + '/main.html'));
+});
+//your code here
+app.post('/add', (req, res) => {
+  const {a,b} = req.body;
+  res.status(200).send(a+b);
+  // res.sendFile(path.join(__dirname + '/main.html'));
+});
+module.exports = app;
